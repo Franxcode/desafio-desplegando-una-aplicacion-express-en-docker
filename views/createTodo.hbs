@@ -12,14 +12,12 @@
     <div class="container my-3">
         <div class="row">
             <div class="col">
-                {{!-- <form action="http://localhost:4000/todos" method="post"> --}}
+                {{!-- <form action="/todos" method="post"> --}}
                 <form onsubmit="event.preventDefault()">
                     <label for="nombre" class="my-3">Nombre:</label>
                     <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
                     <label for="descripcion" class="my-3">Descripción:</label>
                     <input type="text" id="descripcion" class="form-control" placeholder="Ingrese el todo" required>
-                    <label for="fecha" class="my-3">Fecha:</label>
-                    <input type="date" id="fecha" class="form-control" required>
                     <div class="d-flex justify-content-center">
                     <button class="btn btn-primary my-3" onclick="insertTodo()">Agregar todo</button>
                     </div>

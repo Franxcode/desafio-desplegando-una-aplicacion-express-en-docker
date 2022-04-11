@@ -1,9 +1,8 @@
 moment.locale(); 
-const url = 'http://localhost:4000/';
+const url = '/';
 
 let nombre = document.getElementById('nombre');
 let descripcion = document.getElementById('descripcion');
-let fecha = document.getElementById('fecha');
 
 const insertTodo = () => {
     const data = {
@@ -15,7 +14,6 @@ const insertTodo = () => {
     axios.post(url + 'todos', data).then(() => {
         nombre.value = "";
         descripcion.value = "";
-        fecha.value = "";
     });
 
     Swal.fire({

@@ -1,5 +1,5 @@
 moment.locale(); 
-const url = 'http://localhost:4000/';
+const url = '/';
 
 const nombre = document.getElementById('nombre');
 const descripcion = document.getElementById('descripcion');
