@@ -24,10 +24,6 @@ app.get('/todo-create', (req, res) => {
     res.render('createTodo');
 });
 
-app.get('/todo-delete/:id', (req, res) => {
-    res.render('deleteTodo');
-});
-
 app.get('/todos', async (req, res) => {
     const todos = await getTodos();
     res.json({todos});
