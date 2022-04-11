@@ -30,8 +30,8 @@ app.get('/todos', async (req, res) => {
 });
 
 app.post('/todos', async (req, res) => {
-    const { nombre, descripcion, fecha } = req.body;
-    await insertTodo(nombre, descripcion, fecha);
+    const { nombre, descripcion } = req.body;
+    await insertTodo(nombre, descripcion);
     res.render('createTodo');
 });
 
