@@ -5,18 +5,9 @@
 
 # Instrucciones
 
-1. Crear en postgreSQL la siguiente tabla: todos
-2. El código para crear la tabla es el siguiente:
-```
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-CREATE TABLE todos (
-	id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-	nombre VARCHAR(64) NOT NULL,
-	descripcion VARCHAR(255) NOT NULL,
-	fecha TIMESTAMP);
-```
-3. Si es que tu postgreSQL usa contraseña, asegurate de establecerla en el archivo .env, en la variable PGPASSWORD=0000, reemplazando los 0000 por tu clave.
+1. Instala las dependencias con ```npm install```.
+2. Ejecuta el siguiente comando ```npm run migrate``` para crear la base de datos.
+3. Si es que tu postgreSQL usa contraseña, asegurate de establecerla en el archivo ```.env```, en la variable ```PGPASSWORD=0000```, reemplazando los ```0000``` por tu clave.
 4. Luego que esto ya está definido, debes asegurarte de estar dentro de la carpeta de tu proyecto y debes escribir el siguiente comando: ```docker build . -t desafio-desplegando-express-en-docker```
 5. Luego de realizar este comando, comenzarás a ver mensajes de progreso como los que te muestro en la siguiente imagen:
 ![Docker Build Command](https://github.com/Franxcode/desafio-desplegando-una-aplicacion-express-en-docker/blob/master/public/assets/img/Docker_Build_Command.PNG?raw=true)
